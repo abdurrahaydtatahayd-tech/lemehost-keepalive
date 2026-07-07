@@ -1,7 +1,7 @@
 name: Lemehost Keep Alive
 on:
   schedule:
-    - cron: '*/4 *'  # Her 4 dakikada 1
+            - cron: '*/4 * * *' # Her 4 dakikada 1
   workflow_dispatch:
 
 jobs:
