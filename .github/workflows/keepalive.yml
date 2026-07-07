@@ -1,0 +1,12 @@
+name: Lemehost Keep Alive
+on:
+  schedule:
+    - cron: '*/4 *'  # Her 4 dakikada 1
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Lemehost Page
+        run: curl -s -o /dev/null -w "%{http_code}\n" https://lemehost.com/server/10212106/free-plan
